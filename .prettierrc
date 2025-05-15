@@ -1,0 +1,17 @@
+/** @type {import("prettier").Config} */
+module.exports = {
+  printWidth: 200,             // 每行最大长度
+  tabWidth: 2,                 // 一个 tab 占用空格数
+  useTabs: false,              // 使用空格代替 tab
+  semi: true,                  // 行尾是否添加分号
+  singleQuote: true,          // 使用单引号
+  quoteProps: 'as-needed',    // 对象的 key 仅在必要时添加引号
+  jsxSingleQuote: false,      // JSX 中是否使用单引号
+  trailingComma: 'all',       // 尾逗号（es5/all/none）
+  bracketSpacing: true,       // 花括号是否添加空格 { a: 1 }
+  bracketSameLine: false,     // JSX 标签的 > 是否另起一行
+  arrowParens: 'avoid',       // 箭头函数只有一个参数时是否省略括号
+  proseWrap: 'preserve',      // markdown 是否换行
+  htmlWhitespaceSensitivity: 'css', // html 空格敏感度
+  endOfLine: 'lf',            // 换行符（lf/crlf）
+};
