@@ -1,6 +1,6 @@
 /** @type {import("prettier").Config} */
 module.exports = {
-  printWidth: 200,             // 每行最大长度
+  printWidth: 120,             // 每行最大长度
   tabWidth: 2,                 // 一个 tab 占用空格数
   useTabs: false,              // 使用空格代替 tab
   semi: true,                  // 行尾是否添加分号
