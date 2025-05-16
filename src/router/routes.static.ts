@@ -10,7 +10,7 @@ export const staticRoutes = [
       isHide: false,
       isFull: false,
       isAffix: true,
-      isKeepAlive: true,
-    },
-  },
+      isKeepAlive: true
+    }
+  }
 ];

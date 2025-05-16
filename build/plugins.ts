@@ -19,7 +19,9 @@ export const createVitePlugins = () => {
       defaultClass: 'inline-block',
       compiler: 'vue3',
       customCollections: {
-        'svg-icons': FileSystemIconLoader('src/assets/svg-icons', svg => svg.replace(/^<svg /, '<svg fill="currentColor" width="1.2em" height="1.2em"')),
+        'svg-icons': FileSystemIconLoader('src/assets/svg-icons', svg =>
+          svg.replace(/^<svg /, '<svg fill="currentColor" width="1.2em" height="1.2em"'),
+        ),
       },
       scale: 1,
     }),

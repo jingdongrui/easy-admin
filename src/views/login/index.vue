@@ -16,18 +16,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const router = useRouter();
-const username = ref('');
-const password = ref('');
+const username = ref("");
+const password = ref("");
 
 const handleLogin = async () => {
   // TODO: 实现登录逻辑
-  console.log('登录信息：', { username: username.value, password: password.value });
+  console.log("登录信息：", {
+    username: username.value,
+    password: password.value
+  });
   // 登录成功后跳转到首页
-  await router.push('/');
+  await router.push("/");
 };
 </script>
 
