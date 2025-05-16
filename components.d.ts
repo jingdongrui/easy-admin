@@ -9,6 +9,11 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    'IconCarbon:addFilled': typeof import('~icons/carbon/add-filled')['default']
+    IconCarbonSun: typeof import('~icons/carbon/sun')['default']
+    IconHeroiconsSolidBell: typeof import('~icons/heroicons-solid/bell')['default']
+    IconMdiAccount: typeof import('~icons/mdi/account')['default']
+    'IconSolar:4kLinear': typeof import('~icons/solar/4k-linear')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
