@@ -1,7 +1,7 @@
 export const staticRoutes = [
   {
     path: "/home/index",
-    name: "home",
+    name: "Home",
     component: "/home/index",
     meta: {
       icon: "HomeFilled",
@@ -12,5 +12,19 @@ export const staticRoutes = [
       isAffix: true,
       isKeepAlive: true
     }
-  }
+  },
+  {
+    path: "/sys-manage/index",
+    name: "SysManage",
+    component: "/sys-manage/index",
+    meta: {
+      icon: "HomeFilled",
+      title: "系统管理",
+      isLink: "",
+      isHide: false,
+      isFull: false,
+      isAffix: true,
+      isKeepAlive: true
+    }
+  },
 ];
