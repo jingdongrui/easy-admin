@@ -1,36 +1,36 @@
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 /* 页面中的一些固定路由，错误页等 */
-export const routes: RouteRecordRaw[] = [
+export const builtinRoutes: RouteRecordRaw[] = [
   {
-    path: "/",
-    name: "root",
-    redirect: "/appRoot",
-    children: []
+    path: '/',
+    name: 'root',
+    redirect: '/home/index',
+    children: [],
   },
   {
-    path: "/login",
-    name: "login",
-    component: () => import("@/views/login/index.vue")
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login/index.vue'),
   },
   {
-    path: "/403",
-    name: "403",
-    component: () => import("@/views/error/403.vue")
+    path: '/403',
+    name: '403',
+    component: () => import('@/views/error/403.vue'),
   },
   {
-    path: "/404",
-    name: "404",
-    component: () => import("@/views/error/404.vue")
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/error/404.vue'),
   },
   {
-    path: "/500",
-    name: "500",
-    component: () => import("@/views/error/500.vue")
+    path: '/500',
+    name: '500',
+    component: () => import('@/views/error/500.vue'),
   },
   {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    redirect: "/404"
-  }
-];
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    redirect: '/404',
+  },
+]

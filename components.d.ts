@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     'IconCarbon:addFilled': typeof import('~icons/carbon/add-filled')['default']
     IconCarbonSun: typeof import('~icons/carbon/sun')['default']

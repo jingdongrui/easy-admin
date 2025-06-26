@@ -1,19 +1,20 @@
-import { createApp } from "vue";
-import "./styles/index.css";
-import App from "./App.vue";
-import { initPinia } from "./store";
-import { initRouter } from "./router";
+import { createApp } from 'vue'
+import './styles/index.css'
+import 'element-plus/dist/index.css'
+import App from './App.vue'
+import { initPinia } from './store'
+import { initRouter } from './router'
 
 async function setupApp() {
-  const app = createApp(App);
+  const app = createApp(App)
 
   // 初始化 pinia
-  initPinia(app);
+  initPinia(app)
 
   // 初始化 vue-router
-  await initRouter(app);
+  await initRouter(app)
 
-  app.mount("#app");
+  app.mount('#app')
 }
 
-setupApp();
+setupApp()

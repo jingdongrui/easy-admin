@@ -1,30 +1,32 @@
-export const staticRoutes = [
+import type { RouteRecordRaw } from 'vue-router'
+
+export const staticRoutes: RouteRecordRaw[] = [
   {
-    path: "/home/index",
-    name: "Home",
-    component: "/home/index",
+    path: '/home/index',
+    name: 'Home',
+    component: () => import('@/views/home/index.vue'),
     meta: {
-      icon: "HomeFilled",
-      title: "首页",
-      isLink: "",
+      icon: 'HomeFilled',
+      title: '首页',
+      isLink: '',
       isHide: false,
       isFull: false,
       isAffix: true,
-      isKeepAlive: true
-    }
+      isKeepAlive: true,
+    },
   },
   {
-    path: "/sys-manage/index",
-    name: "SysManage",
-    component: "/sys-manage/index",
+    path: '/sys-manage/index',
+    name: 'SysManage',
+    component: () => import('@/views/sys-manage/index.vue'),
     meta: {
-      icon: "HomeFilled",
-      title: "系统管理",
-      isLink: "",
+      icon: 'HomeFilled',
+      title: '系统管理',
+      isLink: '',
       isHide: false,
       isFull: false,
       isAffix: true,
-      isKeepAlive: true
-    }
+      isKeepAlive: true,
+    },
   },
-];
+]

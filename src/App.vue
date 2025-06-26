@@ -1,26 +1,19 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-var aa = 33;
-console.log(aa);
+import { ElConfigProvider } from 'element-plus'
 </script>
 
 <template>
-  <div class="s">
-         <router-view></router-view>
-  </div>
+  <!-- <div class="s">
+    <router-view />
+  </div> -->
+  <ElConfigProvider :size="size" :z-index="zIndex">
+    <app />
+  </ElConfigProvider>
 </template>
 
 <style scoped>
 .s {
   font-weight: 600;
-
-
-
-
-
-
-
-
 
   background: #d3e3fd;
 
