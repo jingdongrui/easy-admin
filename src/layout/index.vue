@@ -17,9 +17,7 @@ const layoutMap: Record<string, any> = {
 </script>
 
 <template>
-  <component :is="layoutMap[settings.layoutType] || DefaultLayout">
-    <router-view />
-  </component>
+  <component :is="layoutMap[settings.layoutType] || DefaultLayout" />
 </template>
 
 <style lang="scss" scoped></style>

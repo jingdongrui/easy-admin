@@ -1,24 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+
+const size = ref('default')
 </script>
 
 <template>
-  <!-- <div class="s">
+  <ElConfigProvider :size="size" :locale="zhCn">
     <router-view />
-  </div> -->
-  <ElConfigProvider :size="size" :z-index="zIndex">
-    <app />
   </ElConfigProvider>
 </template>
 
 <style scoped>
-.s {
-  font-weight: 600;
 
-  background: #d3e3fd;
-
-  font-size: 33px;
-
-  border: 1px solid rgb(51, 255, 255);
-}
 </style>

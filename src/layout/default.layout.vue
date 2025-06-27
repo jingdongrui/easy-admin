@@ -1,30 +1,37 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useSettingsStore } from '@/store/modules/settings'
+import { staticRoutes } from '@/router/routes.static'
+import { generateMenus } from '@/utils/menu'
 
 const settings = useSettingsStore()
 const themeStyle = computed(() => ({
   '--primary-color': settings.primaryColor,
 }))
+const menus = generateMenus(staticRoutes[0].children || [])
 </script>
 
 <template>
   <div class="layout-classic" :style="themeStyle">
     <aside class="sidebar">
-      侧边栏
+      <ul>
+        <li v-for="menu in menus" :key="menu.path">
+          <span>{{ menu.icon ? '🟢' : '' }}{{ menu.title }}</span>
+        </li>
+      </ul>
     </aside>
     <div class="main">
       <header class="header">
         顶部
       </header>
       <section class="content">
-        <router-view />
+        <slot />
       </section>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .layout-classic {
   display: flex;
   height: 100vh;

@@ -15,10 +15,10 @@ export function createVitePlugins() {
 
     Components({
       resolvers: [
+        ElementPlusResolver(),
         IconsResolver({
           prefix: 'icon',
         }),
-        ElementPlusResolver(),
       ],
     }),
     Icons({
@@ -30,6 +30,5 @@ export function createVitePlugins() {
       },
       scale: 1,
     }),
-
   ]
 }
