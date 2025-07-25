@@ -8,13 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElFooter: typeof import('element-plus/es')['ElFooter']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElMain: typeof import('element-plus/es')['ElMain']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    'IconCarbon:addFilled': typeof import('~icons/carbon/add-filled')['default']
-    IconCarbonSun: typeof import('~icons/carbon/sun')['default']
-    IconHeroiconsSolidBell: typeof import('~icons/heroicons-solid/bell')['default']
-    IconMdiAccount: typeof import('~icons/mdi/account')['default']
-    'IconSolar:4kLinear': typeof import('~icons/solar/4k-linear')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

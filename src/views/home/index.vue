@@ -1,7 +1,9 @@
 <!-- <script setup lang="ts"></script> -->
 
 <script lang="ts" setup>
+import { useStorage } from '@vueuse/core'
 
+const layoutThemeColor = useStorage('layout-theme-color', '#243db9') // 默认主题色
 </script>
 
 <template>
